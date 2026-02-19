@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { loginWithEmail } from "../lib/auth.services";
 import { useUser } from "../hooks/user";
 import Input from "../components/input";
@@ -9,7 +9,6 @@ import GlobalLoading from "../components/global-loading";
 
 export default function Login() {
   const { user, loading } = useUser();
-  const navigate = useNavigate();
   const { t } = useTranslation();
 
   const [email, setEmail] = useState<string>("");
@@ -29,7 +28,11 @@ export default function Login() {
     );
   }
 
-  if (user) {
+  if (user?.role === "admin") {
+    return <Navigate to="/private/dashboard" replace />;
+  }
+
+  if (user?.role === "user") {
     return <Navigate to="/private" replace />;
   }
 
@@ -41,13 +44,7 @@ export default function Login() {
     setBtnLoading(true);
 
     try {
-      const result = await loginWithEmail(email, password);
-
-      if (result.role === "admin") {
-        navigate("/private/dashboard", { replace: true });
-      } else {
-        navigate("/private", { replace: true });
-      }
+      await loginWithEmail(email, password);
     } catch (err: unknown) {
       if (err instanceof Error) {
         Swal.fire({
