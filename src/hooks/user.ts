@@ -6,7 +6,7 @@ import type { IUser } from "../interfaces/user.interface";
 
 export function useUser() {
   const [user, setUser] = useState<IUser | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, async (firebaseUser) => {

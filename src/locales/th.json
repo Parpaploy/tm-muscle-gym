@@ -1,0 +1,38 @@
+{
+  "header": { "signup": "สมัครสมาชิก", "login": "เข้าสู่ระบบ" },
+
+  "error": {
+    "signup-failed": "สมัครสมาชิกไม่สำเร็จ",
+    "login-failed": "เข้าสู่ระบบไม่สำเร็จ",
+    "error-occurred": "เกิดข้อผิดพลาด",
+    "email-valid": "รูปแบบอีเมลไม่ถูกต้อง",
+    "password-not-match": "รหัสผ่านไม่ตรงกัน"
+  },
+
+  "input": {
+    "email": "อีเมล",
+    "password": "รหัสผ่าน",
+    "name": "ชื่อ",
+    "lastname": "นามสกุล",
+    "birthdate": "วัน/เดือน/ปีเกิด",
+    "address": "ที่อยู่ปัจจุบัน",
+    "work-address": "ที่ทำงาน",
+    "phone": "เบอร์โทร",
+    "confirm-password": "ยืนยันรหัสผ่าน",
+    "have-account": "มีบัญชีแล้ว?",
+    "signup-success-title": "สมัครสมาชิกสำเร็จ",
+    "signup-success-text": "กรุณาเข้าสู่ระบบ"
+  },
+
+  "btn": {
+    "signup": "กำลังสมัครสมาชิก...",
+    "login": "กำลังเข้าสู่ระบบ..."
+  },
+
+  "other": {
+    "forgot-password": "ลืมรหัสผ่าน?",
+    "no-account": "ยังไม่มีบัญชี",
+    "address": "ที่อยู่...",
+    "have-account": "มีบัญชีแล้ว?"
+  }
+}

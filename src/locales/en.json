@@ -1,0 +1,40 @@
+{
+  "header": {
+    "signup": "Sign Up",
+    "login": "Log In"
+  },
+
+  "error": {
+    "signup-failed": "Sign up failed",
+    "login-failed": "Login failed",
+    "error-occurred": "An error occurred",
+    "email-valid": "Invalid email format",
+    "password-not-match": "Passwords do not match"
+  },
+
+  "input": {
+    "email": "Email",
+    "password": "Password",
+    "name": "First Name",
+    "lastname": "Last Name",
+    "birthdate": "Date of Birth",
+    "address": "Current Address",
+    "work-address": "Work Address",
+    "phone": "Phone Number",
+    "confirm-password": "Confirm Password",
+    "have-account": "Already have an account?",
+    "signup-success-title": "Registration Successful",
+    "signup-success-text": "Please log in to continue"
+  },
+
+  "btn": {
+    "signup": "Signing up...",
+    "login": "Logging in..."
+  },
+
+  "other": {
+    "forgot-password": "Forgot password?",
+    "no-account": "Don't have an account?",
+    "have-account": "Already have an account?"
+  }
+}

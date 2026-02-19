@@ -6,3 +6,12 @@ export interface IUser {
   role?: "admin" | "user";
   createdAt?: Timestamp;
 }
+
+export interface SignupData {
+  name: string;
+  lastName: string;
+  birthdate: number | null;
+  address: string;
+  workAddress: string;
+  phone: string;
+}

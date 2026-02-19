@@ -3,10 +3,21 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
-import { doc, setDoc, serverTimestamp, getDoc } from "firebase/firestore";
+import {
+  doc,
+  setDoc,
+  serverTimestamp,
+  getDoc,
+  Timestamp,
+} from "firebase/firestore";
 import { auth, db } from "../lib/firebase";
+import type { SignupData } from "../interfaces/user.interface";
 
-export async function signupWithEmail(email: string, password: string) {
+export async function signupWithEmail(
+  email: string,
+  password: string,
+  data: SignupData,
+) {
   const userCredential = await createUserWithEmailAndPassword(
     auth,
     email,
@@ -19,6 +30,12 @@ export async function signupWithEmail(email: string, password: string) {
     uid,
     email,
     role: "user",
+    name: data.name,
+    lastName: data.lastName,
+    birthdate: data.birthdate ? Timestamp.fromMillis(data.birthdate) : null,
+    address: data.address,
+    workAddress: data.workAddress,
+    phone: data.phone,
     createdAt: serverTimestamp(),
   });
 

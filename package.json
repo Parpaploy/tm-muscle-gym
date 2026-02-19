@@ -12,9 +12,15 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
     "firebase": "^12.8.0",
+    "i18next": "^25.8.11",
     "react": "^19.2.0",
+    "react-datepicker": "^9.1.0",
     "react-dom": "^19.2.0",
+    "react-i18next": "^16.5.4",
+    "react-icons": "^5.5.0",
+    "react-phone-input-2": "^2.15.1",
     "react-router-dom": "^7.13.0",
+    "sweetalert2": "^11.26.18",
     "tailwindcss": "^4.1.18",
     "vite-plugin-mkcert": "^1.17.9"
   },
