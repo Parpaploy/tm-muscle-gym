@@ -5,6 +5,7 @@ import Signup from "./pages/signup";
 import Login from "./pages/login";
 import Dashboard from "./pages/dashboard";
 import Homepage from "./pages/homepage";
+import Membership from "./pages/membership";
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ export const router = createBrowserRouter([
     element: <PrivateLayout />,
     children: [
       { index: true, element: <Homepage /> },
+      { path: "membership", element: <Membership /> },
       { path: "dashboard", element: <Dashboard /> },
     ],
   },

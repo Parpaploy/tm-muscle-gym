@@ -18,7 +18,7 @@ export default function PrivateLayout() {
   }
 
   return (
-    <main className="w-full max-w-107.5 mx-auto h-[93svh] mt-[7svh] bg-[#515151]">
+    <main className="w-full max-w-107.5 mx-auto h-[93svh] mt-[7svh] bg-[#515151] overflow-y-auto">
       <PrivateNavbar />
 
       <Outlet />
